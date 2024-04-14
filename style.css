@@ -4,19 +4,22 @@
 }
 
 body {
-    padding-right: 30%;
     background-color: whitesmoke;
     height: 100vh;
+    width: 100vw;
 }
 
 h1 {
+    padding-right: 36%;
     padding-left: 37%;
     text-align: center;
     color: black;
     font-size: 50px;
 }
 
-
+.corpo {
+    margin-right: 30%;
+}
 .pointingdown {
     background-image: url(images/pointingdown.png);
     background-size: contain;
@@ -38,9 +41,8 @@ h1 {
     background-repeat: no-repeat;
     padding:0;
     margin: 4.8%;
-    margin-top: 27%;
+    margin-top: 20%;
     float: inline-end;
-
     position: relative;
 }
 
@@ -62,6 +64,7 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     margin: 6%;
+    margin-top: -1%;
     margin-left: 0;
 
 }
