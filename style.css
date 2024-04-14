@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-right: 30%;
+    background-color: whitesmoke;
+    height: 100vh;
+}
+
+h1 {
+    padding-left: 37%;
+    text-align: center;
+    color: black;
+    font-size: 50px;
+}
+
+
+.pointingdown {
+    background-image: url(images/pointingdown.png);
+    background-size: contain;
+    width: 80px;
+    height: 100px;
+    margin-left:20%;
+    opacity: 0;
+}
+
+#pointing1 {
+    margin-top:10%;
+    margin-left:25%;
+}
+
+.container {
+    width: 150px;
+    height: 135px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding:0;
+    margin: 4.8%;
+    margin-top: 27%;
+    float: inline-end;
+
+    position: relative;
+}
+
+.container:hover .pointingdown {
+   animation: pointer 1s linear infinite;
+}
+#char {
+    background-image: url(images/pokebola1.png);
+    width: 150px;
+    height: 135px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#squir {
+    background-image: url(images/pokebola1.png);
+    width: 150px;
+    height: 135px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 6%;
+    margin-left: 0;
+
+}
+
+#bulb {
+    background-image: url(images/pokebola1.png);
+    width: 150px;
+    height: 135px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+@keyframes pointer {
+   0% {
+    opacity: 1;
+   }
+   
+   10% {
+    opacity: 1;
+   }
+
+   50% {
+    opacity: 1;
+    transform: translateY(-3em);
+   }
+
+   100% {
+    opacity: 1;
+    transform: translate(0)
+   }
+}
