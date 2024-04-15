@@ -4,12 +4,14 @@
 }
 
 body {
+    text-align: center;
     background-color: whitesmoke;
     height: 100vh;
     width: 100vw;
 }
 
 h1 {
+    content-visibility: visible;
     padding-right: 36%;
     padding-left: 37%;
     text-align: center;
@@ -18,9 +20,13 @@ h1 {
 }
 
 .corpo {
-    margin-right: 30%;
-    margin-left: 15%;
+    margin-right: 10%;
+    margin-left: 31%;
+    height: 50vh;
+    width: 50vw;
+    position:absolute;
 }
+
 .pointingdown {
     background-image: url(images/pointingdown.png);
     background-size: contain;
@@ -43,38 +49,45 @@ h1 {
     padding:0;
     margin: 4.8%;
     margin-top: 20%;
-    float: inline-end;
+    float: inline-start;
     position: relative;
 }
 
 .container:hover .pointingdown {
-   animation: pointer 1s linear infinite;
+   animation: pointer 0.5s linear infinite;
 }
+
 #char {
+    /*
+    animation: biger 3s ease-in-out forwards, diagD 3s ease-in-out forwards, charOpen 5s ease-in-out forwards 3s;
+    animation: esconder 2s ease-in-out forwards; */
     background-image: url(images/pokebola1.png);
     width: 150px;
     height: 135px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
 #squir {
+    /* animation: biger 3s ease-in-out forwards, move 3s ease-in-out forwards, squirOpen 5s ease-in-out forwards 3s;
+    animation: esconder 2s ease-in-out forwards; */
     background-image: url(images/pokebola1.png);
     width: 150px;
     height: 135px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     margin: 6%;
     margin-top: -1%;
     margin-left: 0;
-
 }
 
 #bulb {
+    /* animation: biger 3s ease-in-out forwards, diagE 3s ease-in-out forwards, bulbOpen 5s ease-in-out forwards 3s;
+    animation: esconder 2s ease-in-out forwards; */
     background-image: url(images/pokebola1.png);
     width: 150px;
     height: 135px;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 
@@ -84,17 +97,215 @@ h1 {
     opacity: 1;
    }
    
-   10% {
-    opacity: 1;
-   }
-
    50% {
-    opacity: 1;
-    transform: translateY(-3em);
+
+    transform: translateY(-1.3em);
    }
 
    100% {
     opacity: 1;
     transform: translate(0)
    }
+}
+
+@keyframes esconder{
+    0% {
+        content-visibility: visible;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0;
+        content-visibility: hidden;
+    }
+    100% {
+        opacity: 0;
+        content-visibility: hidden;
+    }
+}
+
+@keyframes move{
+    from{
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(-90px,0px)
+    }
+}
+
+@keyframes diagD {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(120px, 0px);
+    }
+}
+
+@keyframes diagE {
+    from {
+        transform: translate(0,0);
+    }
+    to {
+        transform: translate(-350px, 0px);
+    }
+}
+
+@keyframes biger {
+    from {
+        height: 135px;
+        width: 150px;
+    } 
+    to {
+        height: 330px;
+        width: 350px;
+    }
+}
+
+@keyframes charOpen {
+    0% {
+        background-image: url(../images/pokebola1.png);
+    }
+    10% {
+        background-image: url(../images/pokebola2.png);
+    }
+    20% {
+        background-image: url(../images/pokebola3.png);
+    }
+    30% {
+        background-image: url(../images/pokebola4.png);
+    }
+    40% {
+        background-image: url(../images/pokebola5.png);
+    }
+    50% {
+        opacity: 0.5;
+        background-image: url(../images/pokebola5.png);
+    }
+    60% {
+        opacity: 0.3;
+        background-image: url(../images/pokebola5.png);
+    }
+    70% {
+        opacity: 0;
+        background-image: url(../images/pokebola5.png);
+    }
+    75%{
+        opacity: 0;
+        background-image: url(../images/charmander.png);
+    }
+    80% {
+        opacity: 0.3;
+        background-image: url(../images/charmander.png);
+    }
+    90% {
+        opacity:0.8;
+        background-image: url(../images/charmander.png);
+    }
+    100% {
+        opacity:1;
+        background-image: url(../images/charmander.png);
+    }
+}
+
+@keyframes squirOpen {
+    0% {
+        background-image: url(../images/pokebola1.png);
+    }
+    10% {
+        background-image: url(../images/pokebola2.png);
+    }
+    20% {
+        background-image: url(../images/pokebola3.png);
+    }
+    30% {
+        background-image: url(../images/pokebola4.png);
+    }
+    40% {
+        background-image: url(../images/pokebola5.png);
+    }
+    50% {
+        opacity: 0.5;
+        background-image: url(../images/pokebola5.png);
+    }
+    60% {
+        opacity: 0.3;
+        background-image: url(../images/pokebola5.png);
+    }
+    70% {
+        opacity: 0;
+        background-image: url(../images/pokebola5.png);
+    }
+    75%{
+        opacity: 0;
+        background-image: url(../images/squirtle.png);
+    }
+    80% {
+        opacity: 0.3;
+        background-image: url(../images/squirtle.png);
+    }
+    90% {
+        opacity:0.8;
+        background-image: url(../images/squirtle.png);
+    }
+    100% {
+        opacity:1;
+        background-image: url(../images/squirtle.png);
+    }  
+}
+
+@keyframes bulbOpen {
+    0% {
+        background-image: url(../images/pokebola1.png);
+    }
+    10% {
+        background-image: url(../images/pokebola2.png);
+    }
+    20% {
+        background-image: url(../images/pokebola3.png);
+    }
+    30% {
+        background-image: url(../images/pokebola4.png);
+    }
+    40% {
+        background-image: url(../images/pokebola5.png);
+    }
+    50% {
+        opacity: 0.5;
+        background-image: url(../images/pokebola5.png);
+    }
+    60% {
+        opacity: 0.3;
+        background-image: url(../images/pokebola5.png);
+    }
+    70% {
+        opacity: 0;
+        background-image: url(../images/pokebola5.png);
+    }
+    75%{
+        opacity: 0;
+        background-image: url(../images/bulbasaur.png);
+    }
+    80% {
+        opacity: 0.3;
+        background-image: url(../images/bulbasaur.png);
+    }
+    90% {
+        opacity:0.8;
+        background-image: url(../images/bulbasaur.png);
+    }
+    100% {
+        opacity:1;
+        background-image: url(../images/bulbasaur.png);
+    }
 }
